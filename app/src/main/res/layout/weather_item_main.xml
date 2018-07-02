@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_main"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:background="@drawable/blue_sky">
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tv_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:text="HÀ NỘI"
+        android:shadowColor="@color/dark_gray"
+        android:shadowDx="0"
+        android:shadowDy="3"
+        android:shadowRadius="0.01"
+        android:textColor="@android:color/white"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/img_weather"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="55dp"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:src="@drawable/snow_sun"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentRight="true"
+        android:orientation="horizontal">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_temperature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="30"
+            android:shadowColor="@color/dark_gray"
+            android:shadowDx="0"
+            android:shadowDy="3"
+            android:shadowRadius="0.01"
+            android:textColor="@android:color/white"
+            android:textSize="22sp" />
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/img_celsius"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/c"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/x"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/blur_bg2">
+        <android.widget.TextClock
+            android:id="@+id/hk_time"
+            android:paddingLeft="10dp"
+            android:gravity="left"
+            android:textColor="@android:color/white"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:timeZone="GMT+0800"
+            android:format24Hour="dd-MM-yyyy k:mm:ss"
+            android:format12Hour="@null" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:layout_above="@id/x"
+        android:background="@drawable/line" />
+</RelativeLayout>
